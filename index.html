@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>ThisJapaneseWordDoesNotExist</title>
+  </head>
+  <script>    
+    function between(min, max) {
+      return Math.floor(
+      Math.random() * (max - min + 1) + min
+      )
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+      document.getElementById("ifrm").src = "./pages/" + between(0, 10) + ".html";
+    });
+  </script>
+  <style type="text/css">
+    body, html
+            {
+                margin: 0; padding: 0; height: 100%; overflow: hidden;
+            }
+
+        #content
+            {
+                position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+            }
+        </style>
+  <body>
+  <div id="content">
+    <iframe id="ifrm" width="100%" height="100%" frameborder="0"/>
+  </div>
+    
+  </body>
+</html>
